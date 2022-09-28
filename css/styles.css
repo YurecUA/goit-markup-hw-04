@@ -9,11 +9,10 @@
   --rgbawhitehigh-color: rgba(255, 255, 255, 0.6);
   --gunmetal-color: #2f303a;
   --dawnpink-color: #ececec;
-  /* Заготовка к 4 ДЗ:
     --cloud-color: #c4c4c4;
     --rgbagunmetal-color: rgba(47, 48, 58, 0.4);
     --rgbawhitelow-color: rgba(255, 255, 255, 0.1);
-    --nobel-color: #afb1b8; */
+    --nobel-color: #afb1b8;
 }
 
 body {
