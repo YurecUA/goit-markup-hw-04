@@ -305,6 +305,10 @@ img {
   color: var(--darkjunglegreen-color);
 }
 
+.example-header {
+  margin-bottom: 50px;
+}
+
 .team-section {
   padding-top: 0;
 }
@@ -398,6 +402,9 @@ img {
 .clients-list {
   display: flex;
   gap: 30px;
+  margin-top: 50px;
+  margin-bottom: 0px;
+  padding: 0;
 }
 
 .clients-element {
