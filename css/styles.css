@@ -9,10 +9,10 @@
   --rgbawhitehigh-color: rgba(255, 255, 255, 0.6);
   --gunmetal-color: #2f303a;
   --dawnpink-color: #ececec;
-    --cloud-color: #c4c4c4;
-    --rgbagunmetal-color: rgba(47, 48, 58, 0.4);
-    --rgbawhitelow-color: rgba(255, 255, 255, 0.1);
-    --nobel-color: #afb1b8;
+  --cloud-color: #c4c4c4;
+  --rgbagunmetal-color: rgba(47, 48, 58, 0.4);
+  --rgbawhitelow-color: rgba(255, 255, 255, 0.1);
+  --nobel-color: #afb1b8;
 }
 
 body {
@@ -49,7 +49,9 @@ body {
 .portfolio-list,
 .navigation-list,
 .footer-contact-list,
-.header-contact-list {
+.header-contact-list,
+.social-media-list,
+.footer-social-list {
   padding: 0;
   margin: 0;
   list-style: none;
@@ -83,14 +85,14 @@ img {
 
 /* Header */
 .page-header {
-  justify-content: center;
-  align-items: center;
   border-bottom: 1px solid var(--dawnpink-color);
 }
+
 .container.header-container {
   display: flex;
   align-items: center;
 }
+
 .site-nav {
   display: flex;
   align-items: center;
@@ -119,18 +121,6 @@ img {
   display: flex;
   gap: 50px;
 }
-
-.header-contact-list {
-  display: flex;
-  gap: 50px;
-  margin-left: auto;
-}
-
-.web {
-  color: var(--azure-color);
-}
-
-/* Main page */
 
 .nav {
   font-weight: 500;
@@ -164,7 +154,15 @@ img {
   color: var(--azure-color);
 }
 
+.header-contact-list {
+  display: flex;
+  gap: 50px;
+  margin-left: auto;
+}
+
 .header-contact-element {
+  display: flex;
+  align-items: center;
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
@@ -179,6 +177,24 @@ img {
   color: var(--azure-color);
 }
 
+.icon-mail,
+.icon.icon-smartphone {
+  fill: var(--boulder-color);
+  margin-right: 10px;
+}
+
+.icon-mail:hover,
+.icon-mail:focus,
+.icon-smartphone:hover,
+.icon-smartphone:focus {
+  fill: var(--azure-color);
+}
+
+.web {
+  color: var(--azure-color);
+}
+
+/* Main page */
 .page-main {
   flex-direction: column;
 }
@@ -188,11 +204,17 @@ img {
   max-width: 1600px;
   text-align: center;
   padding: 200px 0;
-  background-color: var(--gunmetal-color);
+  background-color: var(--cloud-color);
+  background-image: linear-gradient(
+      var(--rgbagunmetal-color),
+      var(--rgbagunmetal-color)
+    ),
+    url('../images/Meeting_bgn.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
 .order-section-header {
-  display: block;
   margin: 0 auto 30px;
   width: 696px;
   font-weight: 900;
@@ -219,7 +241,6 @@ img {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   color: var(--white-color);
   background-color: var(--azure-color);
-  cursor: pointer;
 }
 
 .order-section-button:hover,
@@ -236,6 +257,17 @@ img {
 
 .feature-element {
   width: 270px;
+}
+
+.feature-svg-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 270px;
+  height: 120px;
+  margin-bottom: 30px;
+  border-radius: 4px;
+  background-color: var(--ghostwhite-color);
 }
 
 .feature-header {
@@ -261,7 +293,8 @@ img {
 }
 
 .example-header,
-.team-header {
+.team-header,
+.our-clients-header {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
@@ -284,7 +317,6 @@ img {
 .example-list {
   display: flex;
   gap: 30px;
-  margin-top: 50px;
 }
 
 .team-section {
@@ -329,6 +361,66 @@ img {
   font-style: normal;
 
   color: var(--boulder-color);
+}
+
+.social-media-list {
+  display: flex;
+  gap: 10px;
+  margin-top: 16px;
+  justify-content: center;
+}
+
+.social-media-element {
+  width: 44px;
+  height: 44px;
+}
+
+.social-media-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  color: var(--nobel-color);
+  border-radius: 50%;
+}
+
+.social-media-link:hover,
+.social-media-link:focus {
+  background-color: var(--azure-color);
+  color: var(--white-color);
+}
+
+.client-list {
+  display: flex;
+  gap: 30px;
+}
+
+.client-element {
+  width: 170px;
+  height: 92px;
+}
+
+.client-link {
+  width: 170px;
+  height: 92px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--nobel-color);
+  border: 1px solid var(--nobel-color);
+  border-radius: 4px;
+}
+
+.client-logo {
+  display: block;
+  fill: currentColor;
+}
+
+.client-link:hover,
+.client-link:focus {
+  color: var(--azure-color);
+  border-color: var(--azure-color);
 }
 
 /* Portfolio page */
@@ -435,18 +527,29 @@ img {
   background-color: var(--gunmetal-color);
 }
 
+.footer-container {
+  display: flex;
+  align-items: baseline;
+  flex-direction: column;
+  width: 231px;
+  height: 118px;
+  margin: 0;
+  padding-left: 15px;
+}
+
 .footer-logo {
   width: 145px;
   height: 31px;
   color: var(--white-color);
+  margin-bottom: 20px;
 }
 
 .footer-contacts {
-  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 .footer-adress {
-  display: block;
   width: 231px;
   height: 21px;
   line-height: 1.17;
@@ -456,13 +559,14 @@ img {
   color: var(--white-color);
 }
 
-.footer-contact-list > li:not(:last-child) {
+.footer-contact-list {
   display: flex;
   flex-direction: column;
-  margin-bottom: 9px;
+  gap: 9px;
 }
 
 .footer-contact-element {
+  display: block;
   line-height: 1.14;
   letter-spacing: 0.02em;
   text-decoration: none;
@@ -471,6 +575,54 @@ img {
   color: var(--rgbawhitehigh-color);
 }
 
-.footer-contact-element:hover .footer-contact-element:focus {
+.footer-contact-element:hover,
+.footer-contact-element:focus {
   color: var(--azure-color);
+}
+
+.footer-social {
+  margin-left: 70px;
+}
+
+.fotter-social-text {
+  display: flex;
+  font-weight: 700;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: var(--white-color);
+  margin: 0;
+  justify-content: center;
+}
+
+.footer-social-list {
+  display: flex;
+  gap: 10px;
+  margin-top: 16px;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-social-element {
+  width: 44px;
+  height: 44px;
+}
+
+.footer-social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  color: var(--nobel-color);
+  border-radius: 50%;
+}
+
+.footer-social-link:hover,
+.footer-social-link:focus {
+  background-color: var(--azure-color);
+  color: var(--white-color);
+}
+
+.social-media-svg {
+  fill: currentColor;
 }
